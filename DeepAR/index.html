@@ -13,7 +13,12 @@
       const deepAR = await deepar.initialize({
         licenseKey: '00f097cb07450a9ad35f576eab23c3853421a168d60b634bf5dd00d3e30a3a559917f3061401b1b2',
         canvas: document.getElementById('deepar-canvas'),
-        effect: '/Effects/shoeseffect.deepar'
+        effect: '/Effects/shoeseffect.deepar',
+        // Use the front camera.
+      cameraConfig: {
+        facingMode: "user",
+      },
+      hint: "footInit", // Add this hint to let DeepAR know we want to optimize for shoe-try-on use-case.
       });
     })();
   </script>
