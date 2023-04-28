@@ -1,0 +1,21 @@
+<html>
+<head>
+  <!-- Load deepar.js -->
+  <script src="https://cdn.jsdelivr.net/npm/deepar/js/deepar.js"> </script>
+</head>
+
+<body>
+  <!-- Canvas element for AR preview -->
+  <canvas width="640" height="360" id="deepar-canvas"></canvas>
+  <!-- Initialize DeepAR and load AR effect/filter -->
+  <script>
+    (async function() {
+      const deepAR = await deepar.initialize({
+        licenseKey: '00f097cb07450a9ad35f576eab23c3853421a168d60b634bf5dd00d3e30a3a559917f3061401b1b2',
+        canvas: document.getElementById('deepar-canvas'),
+        effect: '/Effects/shoeseffect.deepar'
+      });
+    })();
+  </script>
+</body>
+</html>
